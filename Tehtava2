@@ -1,5 +1,8 @@
 import numpy as np
+import matplotlib.pyplot as plt
 
+#Tehtava2
+'''
 #create method find biggest array
 def findMax(arr1, arr2):
     if len(arr1) > len(arr2):
@@ -13,3 +16,80 @@ array2 = np.arange(10, 26)
 findMax(array1,array2)
 #print
 print(array2[0:16:2])
+
+'''
+#Tehtava 3
+'''
+even_array1 = np.arange(2, 21 , 2)
+even_array2 = np.arange(34, 53, 2)
+
+array1 = np.stack((even_array1, even_array2))
+array2 = np.stack(even_array2)
+
+'''
+#Tehtava 4
+'''
+a = np.arange(0, 36).reshape(6, 6)
+array3 = np.matrix(a)
+# kolmannelta riviltä ja toisesta sarakkeesta
+print(array3[2,1])
+# datatyyppi, dimensio, koko, summa
+print(array3.shape)
+print(array3.dtype)
+print(array3.ndim)
+print(array3.size)
+print(np.sum(array3))
+'''
+
+#Tehtava 5
+'''
+array4 = np.array([11,22,33,44,55,66,77,88,99]).reshape(3,3)
+array3 = np.matrix(array4)
+print(array3)
+array2 = np.array([33,66,99])
+'''
+#Tehtava 5.2
+'''
+a = np.random.randint(1, 100, size=(5,2))
+print('matrix print: \n', a)
+#print last num in matrix
+print('last item', a.item(9))
+#min
+print('minimum:', np.min(a))
+#max
+print('max: ', np.max(a))
+#mean
+print('mean: ', np.mean(a))
+#std
+print('std: ', np.std(a))
+#var
+print('var: ', np.var(a))
+
+'''
+#Tehtava6
+'''
+array1 = np.arange(15, 41)
+array2 = np.arange(10, 26)
+array4 = np.array([11,22,33,44,55,66,77,88,99])
+
+names = ['a', 'b', 'c']
+values = [len(array1), len(array2), len(array4)]
+
+plt.subplot(131)
+plt.bar(names,values)
+plt.subplot(132)
+plt.scatter(names, values)
+plt.subplot(133)
+plt.plot(names, values)
+plt.suptitle('Some value')
+plt.show()
+'''
+
+#Tehtava 7
+'''
+a = np.zeros((6,7))
+b = np.ones((5,5))
+b[2, 2] = 5
+a[1:6, 1:-1] = b
+print(a)
+'''
