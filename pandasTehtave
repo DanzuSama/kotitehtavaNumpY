@@ -1,0 +1,24 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
+df = pd.read_csv('adult.data.csv')
+df.shape
+df.dtypes
+df.iloc[:15]
+df.iloc[-15:]
+df.drop('age', axis=1)
+df.loc[df['fnlwgt'].idxmax()]
+df.loc[df['age'].idxmin()]
+df.sort_values('age')
+df.sum()
+x = df.loc[df['salary'] == '>50K']
+#print(x)
+x = pd.DataFrame('id')
+print(x)
+'''
+y = np.array(x['age'])
+name = x['salary']
+plt.pie(y, labels=name, autopct='1%.d%%', startangle=90)
+plt.show()
+'''
