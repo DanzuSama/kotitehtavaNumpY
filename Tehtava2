@@ -1,0 +1,15 @@
+import numpy as np
+
+#create method find biggest array
+def findMax(arr1, arr2):
+    if len(arr1) > len(arr2):
+        print(f'arrayNum1 isompi, value = {len(arr1)}, arrayNum2 pienimpi, value = {len(arr2)}')
+    if len(arr2) > len(arr1):
+        print(f'arrayNum2 isompi, value = {len(arr2)}, arrayNum1 pienimpi, value = {len(arr1)}')
+# create 2 array
+array1 = np.arange(15, 41)
+array2 = np.arange(10, 26)
+#use method
+findMax(array1,array2)
+#print
+print(array2[0:16:2])
